@@ -4,7 +4,7 @@
 This repository gives the practice questions for preparing a software engineering Job
 
 # Topics
-### 1. [)
+### 1. [Data Structures Implementation]()
 ### 2. [Arrays]()
 ### 3. [Linked List]()
 ### 4. [Stack & Queues]()
