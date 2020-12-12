@@ -1,0 +1,24 @@
+public static int kthSmallest(int[] arr, int l, int r, int k) 
+{ 
+    //Your code here
+    PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder()); // max heap
+    for(int i = 0; i < k; i++) {
+        pq.add(arr[i]);
+    }
+    // System.out.println(pq.peek());
+    
+    for(int i = k; i < arr.length; i++) {
+        if(pq.peek() > arr[i]) {  // its gonna effect our answer
+            pq.remove();
+            pq.add(arr[i]);
+        }
+    }
+    return pq.peek();
+} 
+
+For each element, after the k’th element
+If the element is less than the root then make it root and call heapify
+
+Time complexity of this solution is O(k + (n-k)*Logk)
+or
+Time Complexity of this solution is O(N Log N)
